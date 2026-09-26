@@ -1,0 +1,70 @@
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap');
+
+/* Light Theme Variables (Default Clean Look) */
+:root {
+    --bg-main: #F8F9FA;
+    --bg-card: #FFFFFF;
+    --text-primary: #1F2937;
+    --text-secondary: #4B5563;
+    --accent: #4F46E5;
+    --accent-hover: #4338CA;
+    --accent-light: #EEF2FF;
+    --border-color: #E5E7EB;
+}
+
+/* Dark Theme Variables (Crimson Black & Deep Forest Green) */
+[data-theme="dark"] {
+    --bg-main: #0c0809;          /* Deep pitch blackish-red */
+    --bg-card: #150f11;          /* Rich charcoal-crimson card layer */
+    --text-primary: #f3f4f6;     /* Crisp white text */
+    --text-secondary: #9ca3af;   /* Muted gray text */
+    --accent: #10b981;           /* Deep dark green / emerald accent */
+    --accent-hover: #059669;     /* Vibrant forest green hover */
+    --accent-light: rgba(16, 185, 129, 0.12); /* Soft green tint for tags */
+    --border-color: #2c1a1d;     /* Subtle blood-red/charcoal border */
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    background-color: var(--bg-main);
+    color: var(--text-primary);
+    line-height: 1.6;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.dynamic-card {
+    background-color: var(--bg-card);
+    border: 1px solid var(--border-color);
+    border-radius: 1rem;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.dynamic-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.4);
+    border-color: var(--accent);
+}
+
+.btn-primary {
+    background-color: var(--accent);
+    color: white;
+    padding: 0.75rem 1.75rem;
+    border-radius: 9999px;
+    font-weight: 600;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    transition: background-color 0.2s;
+}
+
+.btn-primary:hover {
+    background-color: var(--accent-hover);
+}
